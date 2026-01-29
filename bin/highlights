@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/database_path'
+require_relative '../lib/attached_connection'
+require_relative '../lib/highlight_query'
+require_relative '../lib/export'
+
+ANNOTATIONS_DIR = File.expand_path(
+  '~/Library/Containers/com.apple.iBooksX/Data/Documents/AEAnnotation'
+)
+BOOKS_DIR = File.expand_path(
+  '~/Library/Containers/com.apple.iBooksX/Data/Documents/BKLibrary'
+)
+
+directory = ARGV.fetch(0) { abort 'Usage: highlights <directory>' }
+annotations_path = DatabasePath.new(ANNOTATIONS_DIR).path
+books_path = DatabasePath.new(BOOKS_DIR).path
+connection = AttachedConnection.new(annotations_path, books_path)
+library = HighlightQuery.new(connection).fetch
+Export.new(library, directory).save
