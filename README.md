@@ -37,3 +37,40 @@ Re-running preserves manually edited `themes` and `status` fields.
 ```bash
 bundle exec ruby -Ilib -Itest -e 'Dir.glob("test/*_test.rb").each { |f| require_relative f }'
 ```
+
+## Installation
+
+### Requirements
+
+- Ruby 3.1 or later
+- macOS system Ruby (2.6.10) is not supported
+
+### Install Ruby
+
+**Homebrew (simplest):**
+
+```bash
+brew install ruby
+```
+
+**rbenv (version manager):**
+
+```bash
+brew install rbenv
+rbenv install 3.3.0
+rbenv global 3.3.0
+```
+
+**asdf (version manager):**
+
+```bash
+asdf plugin add ruby
+asdf install ruby 3.3.0
+asdf global ruby 3.3.0
+```
+
+### Install dependencies
+
+```bash
+bundle install
+```
