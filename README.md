@@ -42,10 +42,12 @@ bundle exec ruby -Ilib -Itest -e 'Dir.glob("test/*_test.rb").each { |f| require_
 
 ### Requirements
 
-- Ruby 3.1 or later
-- macOS system Ruby (2.6.10) is not supported
+- macOS (Apple Books stores highlights locally)
+- Ruby 3.1 or later (macOS system Ruby 2.6.10 is not supported)
 
-### Install Ruby
+### 1. Install Ruby
+
+Pick one:
 
 **Homebrew (simplest):**
 
@@ -69,8 +71,21 @@ asdf install ruby 3.3.0
 asdf global ruby 3.3.0
 ```
 
-### Install dependencies
+### 2. Clone the repo
+
+```bash
+git clone git@github.com:firedev/apple_books_highlight.git
+cd apple_books_highlight
+```
+
+### 3. Install dependencies
 
 ```bash
 bundle install
+```
+
+### 4. Run
+
+```bash
+bin/highlights ~/path/to/your/obsidian-vault/books
 ```
