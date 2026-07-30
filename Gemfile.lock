@@ -2,14 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.27.0)
-    sqlite3 (2.9.0-arm64-darwin)
+    sqlite3 (2.9.5-arm64-darwin)
+    sqlite3 (2.9.5-x86_64-linux-gnu)
 
 PLATFORMS
   arm64-darwin-25
+  x86_64-linux
 
 DEPENDENCIES
   minitest (~> 5.0)
-  sqlite3 (~> 2.0)
+  sqlite3 (~> 2.9)
 
 BUNDLED WITH
    2.4.10
