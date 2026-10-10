@@ -3,4 +3,4 @@
 source 'https://rubygems.org'
 
 gem 'minitest', '~> 5.0'
-gem 'sqlite3', '~> 2.0'
+gem 'sqlite3', '~> 2.9'
